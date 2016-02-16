@@ -18,3 +18,12 @@ To run a model (say, the BackwardBigram model)  manually, use the following comm
 - bin directory (created after executing ``compile.sh``) contains the java binaries.
 - report directory contains the report in pdf format.
 - trace directory contains three trace file (one for each model).
+
+### Description of files
+- `BigramModel.java` - Implements the forward bigram model.
+- `BackwardBigramModel.java` - Implements the backward bigram model.
+- `BidirectionalBigramModel.java` - Implements the bidirectional bigram model.
+- `DoubleValue.java` - A wrapper class for storing and manipulating doubles.
+- `POSTaggedFile.java` - Code to strip POS tags from the LDC Penn Treebank dataset.
+- `compile.sh` - Script to compile the code.
+- `run.sh` - Script to run all the three models on the three datasets.
