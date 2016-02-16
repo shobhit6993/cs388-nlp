@@ -10,8 +10,11 @@ Executing ``run.sh`` script would run the three models on the three datasets, pr
 
 The script uses the path ``/projects/nlp/penn-treebank3/tagged/pos/atis/`` (and corresponding paths for brown and wsj dataset) for the datasets. As long as the code is being tested on UTCS machines, this should be work. Should the code be required to be tested on a different machine, the ``DATASET`` variable on Line. 5 in the script should be appropriately set.
 
+To run a model (say, the BackwardBigram model)  manually, use the following command in the project directory:
+``java -cp ./bin hw1.lm.BackwardBigramModel /path/to/dataset/ 0.1``
+
 ### Directory structure
 - scr/lm directory in the project directory contains the source code.
 - bin directory (created after executing ``compile.sh``) contains the java binaries.
-- reports directory contains the report in pdf format.
+- report directory contains the report in pdf format.
 - trace directory contains three trace file (one for each model).

@@ -1,0 +1,22 @@
+airheads$ java -cp ./bin/ hw1.lm.BidirectionalBigramModel /projects/nlp/penn-treebank3/tagged/pos/atis/ 0.1
+# Train Sentences = 519 (# words = 3922) 
+# Test Sentences = 58 (# words = 431)
+Training...
+Word Perplexity = 7.235173934081928
+Testing...
+Word Perplexity = 12.700210156018782
+airheads$ java -cp ./bin/ hw1.lm.BidirectionalBigramModel /projects/nlp/penn-treebank3/tagged/pos/wsj/ 0.1
+# Train Sentences = 43820 (# words = 995626) 
+# Test Sentences = 4869 (# words = 111718)
+Training...
+Word Perplexity = 46.514445090625685
+Testing...
+Word Perplexity = 126.11315738801784
+airheads$ java -cp ./bin/ hw1.lm.BidirectionalBigramModel /projects/nlp/penn-treebank3/tagged/pos/brown/ 0.1
+# Train Sentences = 47207 (# words = 1079440) 
+# Test Sentences = 5245 (# words = 93530)
+Training...
+Word Perplexity = 61.46886647117787
+Testing...
+Word Perplexity = 167.48711091426273
+
