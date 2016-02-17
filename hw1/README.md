@@ -2,11 +2,11 @@ Bigram Language Models
 ========
 Problem statement can be found [here](https://www.cs.utexas.edu/~mooney/cs388/hw1.html).
 
-#### How to compile?
+### How to compile?
 Execute ``compile.sh`` script to compile all the java files.
 
 ### How to run?
-Executing ``run.sh`` script would run the three models on the three datasets, producing output similar to the trace file (with a slightly more readable formatting). 
+Executing ``run.sh`` script would run the three models on the three datasets, producing output similar to [this trace file](https://www.cs.utexas.edu/~mooney/cs388/bigram-trace.txt) (with a slightly more readable formatting). 
 
 The script uses the path ``/projects/nlp/penn-treebank3/tagged/pos/atis/`` (and corresponding paths for brown and wsj dataset) for the datasets. As long as the code is being tested on UTCS machines, this should be work. Should the code be required to be tested on a different machine, the ``DATASET`` variable on Line. 5 in the script should be appropriately set.
 
