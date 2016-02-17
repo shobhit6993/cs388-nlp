@@ -5,7 +5,7 @@ import java.util.*;
 
 /**
  * @author Shobhit Chaurasia
- * A bidirectional bigram language model that linearly combines the token 
+ * A bidirectional bigram language model that linearly combines the token
  * generation probabilities of the forward bigram and the backward bigram
  * model. Both forward and backward bigram model use simple fixed-weight
  * interpolation with a unigram model for smoothing.
@@ -52,8 +52,9 @@ public class BidirectionalBigramModel {
      * It is calculated as a weighted sum of the probabilities for each token
      * in both the models (forward as well as backward).
      * @param sentences [description]
+     * @return  perplexity
      */
-    public void test(List<List<String>> sentences) {
+    public double test(List<List<String>> sentences) {
         double totalLogProb = 0;
         double totalNumTokens = 0;
         for (List<String> sentence : sentences) {
@@ -74,6 +75,34 @@ public class BidirectionalBigramModel {
         }
         double perplexity = Math.exp(-totalLogProb / totalNumTokens);
         System.out.println("Word Perplexity = " + perplexity );
+        return perplexity;
+    }
+
+    public void test_multiple_weights(List<List<String>> testSentences) {
+        List<DoubleValue> forward_vector = new ArrayList<DoubleValue>();
+        List<DoubleValue> backward_vector = new ArrayList<DoubleValue>();
+        List<DoubleValue> perplexity = new ArrayList<DoubleValue>();
+        for (double i = 0; i <= 1.0 ; i = i + 0.01 ) {
+            this.forward_weight = i;
+            this.backward_weight = 1.0 - i;
+
+	    DoubleValue v = new DoubleValue();
+            v.setValue(i);
+            forward_vector.add(v);
+
+	    v = new DoubleValue();
+            v.setValue(1.0 - i);
+            backward_vector.add(v);
+
+	    v = new DoubleValue();    
+            v.setValue(this.test(testSentences));
+            perplexity.add(v);
+        }
+        for(int i = 0; i < perplexity.size(); i++) {
+            System.out.print(forward_vector.get(i).getValue() + 
+                            "," + backward_vector.get(i).getValue() + ","
+                             + perplexity.get(i).getValue() + "\n");
+        }
     }
 
     public static int wordCount (List<List<String>> sentences) {
@@ -122,5 +151,6 @@ public class BidirectionalBigramModel {
         System.out.println("Testing...");
         // Test on test data using test.
         model.test(testSentences);
+       // model.test_multiple_weights(testSentences);
     }
 }
