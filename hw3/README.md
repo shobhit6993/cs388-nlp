@@ -27,13 +27,17 @@ Script for running each experiment is supplied in the ``scripts`` directory. To 
 
 ### Description of experiments
 ``expt-1a``: wsj seed, brown self-training, brown test; seed size varied.
+
 ``expt-1b``: wsj seed, no self-training, brown test; seed size varied.
+
 ``expt-1c``: wsj seed, no self-training, wsj test; seed size varied.
 
 ``expt-2a``: wsj seed, brown self-training, brown test; self-training size varied.
 
 ``expt-3a``: brown seed, wsj self-training, wsj test; seed size varied.
+
 ``expt-3b``: brown seed, no self-training, wsj test; seed size varied.
+
 ``expt-3c``: brown seed, no self-training, brown test; seed size varied.
 
 ``expt-4a``: brown seed, wsj self-train, wsj test; self-training size varied.
