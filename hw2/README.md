@@ -1,7 +1,7 @@
 Comparison of HMM and CRF for POS-tagging.
 =============
 
-The goal of this assignment is to compare the perfomance of HMM and CRF on a POS-tagging task. The problem statement can be found [here](https://www.cs.utexas.edu/~mooney/cs388/hw2.html). Mallet's implementation of HMM and CRF are used. The two datasets used are atis and wsj (from Penn Treebank). The results of various experiments can be found in ``report.pdf``
+The goal of this assignment is to compare the perfomance of HMM and CRF on a POS-tagging task. The problem statement can be found [here](https://www.cs.utexas.edu/~mooney/cs388/hw2.html). Mallet's implementation of HMM and CRF are used. The two datasets used are atis and wsj (from Penn Treebank). The results of various experiments can be found in ``report/assignment-2.pdf``
 
 ### Dependencies
 Requires mallet-2.0.7, or mallet-2.0.8RC3, or above. Download from [here](http://mallet.cs.umass.edu/download.php).
